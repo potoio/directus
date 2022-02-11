@@ -6,6 +6,7 @@
 		"api"
 	],
 	"version": "9.5.1",
+	"npmClient": "yarn",
 	"command": {
 		"bootstrap": {
 			"npmClientArgs": [

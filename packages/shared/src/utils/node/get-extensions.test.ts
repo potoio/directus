@@ -1,11 +1,11 @@
 import { EXTENSION_PACKAGE_TYPES, EXTENSION_TYPES } from '../../constants/extensions';
 import { getLocalExtensions, getPackageExtensions } from './get-extensions';
-import { SynchrounousResult, dirSync } from 'tmp';
+import { dirSync } from 'tmp';
 import { ensureDirSync, writeJsonSync } from 'fs-extra';
 
 describe('getPackageExtensions', () => {
-	let rootPackageDir: SynchrounousResult;
-	let noPackageDir: SynchrounousResult;
+	let rootPackageDir: any;
+	let noPackageDir: any;
 
 	beforeEach(() => {
 		noPackageDir = dirSync({ prefix: './' } as any);
@@ -91,7 +91,7 @@ describe('getPackageExtensions', () => {
 });
 
 describe('getLocalExtensions', () => {
-	let rootLocalPackage: SynchrounousResult;
+	let rootLocalPackage: any;
 
 	beforeEach(() => {
 		rootLocalPackage = dirSync({ unsafeCleanup: true, tmpdir: './' } as any);

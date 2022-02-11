@@ -1,10 +1,10 @@
 import { ensureExtensionDirs } from './ensure-extension-dirs';
 import { EXTENSION_TYPES } from '../../constants/extensions';
 import { ExtensionType } from '../../types';
-import { dirSync, SynchrounousResult } from 'tmp';
+import { dirSync } from 'tmp';
 
 describe('ensureExtensionDirs', () => {
-	let rootDir: SynchrounousResult;
+	let rootDir: any;
 
 	beforeEach(() => {
 		rootDir = dirSync({ unsafeCleanup: true });

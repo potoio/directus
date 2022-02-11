@@ -13,6 +13,8 @@
 		"lint:stylelint": "stylelint \"**/*.{css,scss,vue}\" --custom-syntax postcss-html",
 		"format": "prettier --write \"**/*.{js,ts,vue,md,yaml}\"",
 		"dev": "lerna run dev --stream --parallel",
+    "dev:app": "lerna run dev --stream --scope=@directus/app",
+    "dev:api": "lerna run dev --stream --scope=directus",
 		"build": "lerna run build",
 		"build:api": "lerna run build --ignore @directus/app",
 		"pack": "node docker/pack",
